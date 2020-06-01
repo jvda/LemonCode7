@@ -1,0 +1,9 @@
+sudo: required
+services:
+    - docker
+script:
+    - docker build -t lemoncode7_cloud .
+after_succes:
+    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - docker tag lemoncode7_cloud $DOCKER_USER/lemoncode7_cloud
+    - docker push $DOCKER_USER/lemoncode7_cloud
