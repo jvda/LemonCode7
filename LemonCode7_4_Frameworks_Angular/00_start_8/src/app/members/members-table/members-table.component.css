@@ -1,0 +1,23 @@
+.members-container {
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.members-header {
+    position: absolute;
+    top: 0;
+    height: 64px;
+}
+
+.title-team {
+    padding-left: 10px;
+}
+
+app-member-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

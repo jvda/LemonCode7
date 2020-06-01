@@ -1,0 +1,17 @@
+<form #searchForm="ngForm" class="search-form" autocomplete="on" novalidate
+  (ngSubmit)="handleSearch(searchForm.value.team)">
+  <em *ngIf="searchForm.controls.team?.invalid &&
+        (searchForm.controls.team?.touched)" class="float-right">
+    Required
+  </em>
+  <div class="search-field">
+    <mat-form-field class="search-full-width">
+      <mat-label>Search a team in Github</mat-label>
+      <input matInput placeholder="Ex. Lemoncode" value="" type="text" name="team" [(ngModel)]="team" required>
+    </mat-form-field>
+
+    <button mat-icon-button color="primary" type="submit" color="primary" aria-label="Search">
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+</form>

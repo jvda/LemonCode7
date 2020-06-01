@@ -1,0 +1,13 @@
+
+.member-card {
+    margin:10px; 
+    width:15rem;
+}
+
+.avatar-title   {
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

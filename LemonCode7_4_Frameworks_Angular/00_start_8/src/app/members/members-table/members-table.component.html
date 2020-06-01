@@ -1,0 +1,15 @@
+
+<mat-toolbar color="primary" class="member-header">
+  <h2>Members Page</h2>
+</mat-toolbar>
+<mat-sidenav-container class="members-container">
+  <mat-sidenav #sidenav mode="side" opened fixedInViewport="false">
+    <app-member-search (searchChange)="loadMembers($event)"></app-member-search>
+  </mat-sidenav>
+
+  <mat-sidenav-content >
+    <h2 class="title-team" >{{team}}</h2>
+    <app-member-row [member]="member" *ngFor="let member of members"></app-member-row>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

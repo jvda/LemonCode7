@@ -1,0 +1,15 @@
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+}
+
+.search-field {  
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+em { 
+  color: red;
+}
