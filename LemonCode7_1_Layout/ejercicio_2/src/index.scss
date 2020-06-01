@@ -1,0 +1,51 @@
+
+@import "./styles/layout";
+@import "./styles/style_blue";
+
+html, body{
+   margin: 0;
+   padding: 0;
+   font-size: 100%;
+   height: 100vh;
+   @include flex-layout(column);
+}
+
+.content {
+    @include flex-layout(column);
+    margin: auto;
+
+    [class^='box-'] {
+        //@include flex-layout(column); 
+        @include size-box($radious); 
+    }
+
+    .box-base{
+        background-color: $color-base;
+    }
+
+    .box-important{
+        background-color: $color-important;
+    }
+    
+    .box-warning{
+        background-color: $color-warning;
+    }
+    
+    .box-shadow{
+        background-color: $color-box-shadow;
+        box-shadow: $shadow;
+    }
+
+    .content-label {
+        @include flex-layout(column,space-evenly);
+        height: 110px;
+
+        .label-principal-font {
+            font: $font-principal;
+        }
+
+        .label-secondary-font {
+            font: $font-secondary;
+        }
+    }
+}

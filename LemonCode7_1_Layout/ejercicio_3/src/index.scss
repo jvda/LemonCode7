@@ -1,0 +1,39 @@
+
+@import 'https://fonts.googleapis.com/css?family=Comfortaa';
+@import "./styles/layout";
+
+$font-header-lemoncode: bold large Comfortaa;
+$border-color: 1px solid gray;
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+.content{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    height: 100vh;
+
+    .header-lemoncode {
+        border: $border-color;
+        background-color: lightpink;
+        font: $font-header-lemoncode;
+    }
+
+    .content-navbar {
+        background-color: gray;
+        
+        .column-navbar {
+            background-color: white;
+            border: $border-color;
+            text-align: center;
+        }    
+    }
+}
+
+@include responsive-layout;
+
+// Prueba configuración git

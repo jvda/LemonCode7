@@ -1,0 +1,48 @@
+
+@import "./styles/layout";
+
+$min-large-resolution: 75rem;
+$min-medium-resolution: 40rem;  // To can see layout changes in portrait or landscape resolotuions in a mobile  
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+.content-all{
+    height: 100vh;
+
+    .navbar-lemoncode {
+        background-color: lightpink;
+
+        .column-navbar {
+            padding-left: 2px;
+            padding-right: 2px;
+            color: blue;
+            &:visited {
+                color: purple;
+            }
+        }
+    }
+
+    .content-A {
+        background-color: yellow;
+    }
+
+    .content-B {
+        background-color: blue;
+    }
+}
+
+@media screen and (min-width: $min-large-resolution) { 
+    @include large-resolution;
+}
+
+@media screen and (max-width: $min-large-resolution - 0.1rem) and (min-width: $min-medium-resolution) {
+    @include medium-resolution;    
+}
+
+@media screen and (max-width: $min-medium-resolution - 0.1rem) {
+    @include small-resolution;
+}

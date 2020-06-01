@@ -1,0 +1,56 @@
+
+@mixin flex-layout ($flex-direction: column, $flex-justify: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $flex-justify;
+}
+
+@mixin responsive-layout {
+    @media screen and (min-width: 75rem) {
+        .content{        
+            @include flex-layout(column, flex-start);
+        
+            .header-lemoncode {
+                @include flex-layout(row,space-between);
+                padding-right: 10px;
+                padding-left: 10px;
+                margin: 0;
+            }
+        
+            .content-navbar {
+                @include flex-layout(row,space-evenly);
+                
+                .column-navbar {
+                    width: 14.285%;
+                }    
+            }
+        }
+    }
+
+    @media screen and (max-width: 74.9rem) {
+        .content{        
+            @include flex-layout(column, space-between);
+        
+            .header-lemoncode {
+                @include flex-layout(row,space-between);
+                padding-right: 10px;
+                padding-left: 10px;
+                margin: 0;
+
+                .column-header:nth-of-type(2){
+                    display: none;
+                }
+            }
+        
+            .content-navbar {
+                @include flex-layout(row,space-evenly);
+                
+                .column-navbar {
+                    padding-right: 1px;
+                    padding-left: 1px;
+                    font-size: 60%;
+                }    
+            }
+        }
+    }
+}

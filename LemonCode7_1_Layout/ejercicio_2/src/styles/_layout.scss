@@ -1,0 +1,18 @@
+
+@mixin flex-layout ($flex-direction: column, $flex-justify: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $flex-justify;
+}
+
+@mixin size-box ($radious: 5px) {
+    margin: 0;
+    padding: 30px;
+    height: 50px;
+    width: 100px;
+    
+    border: 1px solid gray;
+    border-radius: $radious;
+
+    font:  bold large "Comic Sans MS", cursive, sans-serif;
+}

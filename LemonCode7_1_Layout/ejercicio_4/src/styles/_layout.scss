@@ -1,0 +1,70 @@
+
+@mixin flex-layout ($flex-direction: column, $flex-justify: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $flex-justify;
+}
+
+@mixin large-resolution {
+
+    .content-all{ 
+        max-width: $min-large-resolution;
+        margin: auto;
+
+        display: grid;
+        grid-template-columns: 25% auto;
+        grid-template-rows: auto;
+
+        grid-template-areas: 
+            "header contentA"
+            "header contentB";
+
+        .navbar-lemoncode {
+            grid-area: header;
+            @include flex-layout(column, space-around);
+        }
+
+        .content-A{
+            grid-area: contentA;
+        }
+
+        .content-B{
+            grid-area: contentB;
+        }
+    }
+}
+ 
+@mixin medium-resolution {
+    .content-all{  
+        @include flex-layout(column, space-between);
+
+        .navbar-lemoncode {
+            @include flex-layout(row,space-around);
+            flex-grow: 1;
+
+            .column-navbar {
+                @include flex-layout(column);
+            }
+        }
+
+        [class ^= 'content-']{
+            flex-grow: 3;
+        }
+    }
+}
+
+
+@mixin small-resolution {    
+    .content-all{        
+        @include flex-layout(column, space-between);
+
+        .navbar-lemoncode {
+            @include flex-layout(row,start);
+        }
+
+        [class ^= 'content-']{
+            flex-grow: 1;
+        }
+    }
+
+}

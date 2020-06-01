@@ -1,0 +1,22 @@
+
+@mixin back-color-palette ($base-color: grey, $gradient-color-porcent: 5%){
+    
+    $gradient: (
+    darken( $base-color, $gradient-color-porcent * 4),
+    darken( $base-color, $gradient-color-porcent * 3 ),
+    darken( $base-color, $gradient-color-porcent * 2 ),
+    darken( $base-color, $gradient-color-porcent ),
+    $base-color,
+    lighten( $base-color, $gradient-color-porcent ),
+    lighten( $base-color, $gradient-color-porcent * 2 ),
+    lighten( $base-color, $gradient-color-porcent * 3 ),
+    lighten( $base-color, $gradient-color-porcent * 4 )
+    );
+
+    @for $ncolor from 1 through length($gradient) {
+        .color:nth-of-type(#{$ncolor}) {
+            background-color: nth($gradient, $ncolor);
+        };
+    };
+
+};

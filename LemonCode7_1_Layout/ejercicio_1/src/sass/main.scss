@@ -1,0 +1,39 @@
+
+@import "color-gradient";
+@import "layout";
+
+$palettes-colors-base: greenyellow orange cyan;
+$gradient-color-porcent: 7%;
+
+html, body{
+   margin: 0;
+   padding: 0;
+   font-size: 100%;
+}
+
+.content-palette {
+    height: 100vh;
+    @include flex-layout(column);
+        
+    .palette {
+        @include flex-layout(row);
+
+        @for $npalette from 1 through length($palettes-colors-base) {
+            &:nth-of-type(#{$npalette}) {
+                @include back-color-palette(nth($palettes-colors-base, $npalette), $gradient-color-porcent);
+            };
+        };
+            
+        .color {
+            min-width: 100px;
+            min-height: 150px;
+            margin: 4px;
+            border-radius: 5px;
+
+            text-align: center;
+            @include flex-layout(column);
+        }
+    }
+}
+
+
