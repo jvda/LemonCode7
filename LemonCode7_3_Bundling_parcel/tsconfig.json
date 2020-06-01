@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "es6",
+        "moduleResolution": "node",
+        "declaration": false,
+        "noImplicitAny": false,
+        "jsx": "react",
+        "sourceMap": true,
+        "noLib": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "allowSyntheticDefaultImports":true
+    },
+    "parcelTsPluginOptions": {
+        // If true type-checking is disabled
+        "transpileOnly": true
+    },
+    "compileOnSave": false,
+    "exclude": [
+        "node_modules"
+    ]
+}

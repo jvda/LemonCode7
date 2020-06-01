@@ -1,0 +1,37 @@
+{
+  "name": "lemoncode7_bundling_parcel",
+  "version": "1.0.0",
+  "description": "Ejercicios del modulo de Bundling con parcel",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --noEmit && rimraf dist && parcel ./src/index.html",
+    "build:prod": "tsc --noEmit && rimraf dist && parcel build ./src/index.html",
+    "start": "tsc --noEmit && rimraf dist && parcel ./src/index.html --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvda/LemonCode7_Bundling_parcel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvda/LemonCode7_Bundling_parcel/issues"
+  },
+  "homepage": "https://github.com/jvda/LemonCode7_Bundling_parcel#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "rimraf": "^3.0.0",
+    "sass": "^1.24.4",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@material-ui/core": "^4.8.3",
+    "@material-ui/icons": "^4.5.1",
+    "@types/node": "^13.5.0",
+    "index": "^0.4.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}

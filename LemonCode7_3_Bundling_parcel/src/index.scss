@@ -1,0 +1,122 @@
+
+$min-large-resolution: 75rem;
+$min-medium-resolution: 40rem;  // To can see layout changes in portrait or landscape resolotuions in a mobile  
+
+html, body{
+    margin: 0;
+    padding: 0;
+ }
+
+body {
+    background: black;
+}
+
+.app{
+
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .head {
+        
+        @media screen and (min-width: $min-large-resolution) { 
+
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: top;
+            padding: 10px;
+
+            .logo {
+                height: 100px;
+                padding: 10px;
+            }
+
+            .head-description {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: left;
+                padding: 10px;
+
+                h1{
+                    margin: 0;
+                }
+            }
+        }
+        
+        @media screen and (max-width: $min-large-resolution - 0.1rem) {
+            display: none;
+        }
+
+    };
+
+    .root {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 2rem;
+        overflow: auto;
+
+        .bulb-control {
+            width: 100%;
+            display: flex;
+            
+            @media screen and (orientation: portrait){
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+            @media screen and (orientation: landscape){
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            flex-basis: fill;
+            padding: 2rem;
+            overflow: auto;
+            align-items: center;
+
+            .bulb {
+                padding:10px;
+                height: 150px;
+            }
+
+            .slider-dimer, .button-onoff{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding:10px;
+                width: 100px;
+                height: 100px;
+                align-items: center;
+            }
+        }
+
+    }
+
+    .footer {
+        
+        @media screen and (min-width: $min-large-resolution) { 
+
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            padding: 10px;
+
+            img{
+                height: 100%;
+            }
+        }
+        
+        @media screen and (max-width: $min-large-resolution - 0.1rem) {
+            display: none;
+        }
+    }
+}

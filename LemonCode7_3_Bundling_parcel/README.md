@@ -1,0 +1,48 @@
+
+# Módulo 3 - Bundling (Parcel)
+
+  
+
+Ejercicio del módulo 3 de Bundling con Parcel del Máster de Lemoncode 7ª edición. Es el mismo ejercicio que el hecho con Webpack pero utilizando Parcel.
+
+  
+
+## Contenido
+
+  
+
+Se han incluido los puntos importantes que se pedían en el enunciado de la práctica:
+
+- Webpack,
+
+- Logos e imágenes cargados de diferente forma
+
+- Typescript
+
+- SASS
+
+- React
+
+- Versiones para DEV y PROD
+
+- Variables de entorno para DEV y PROD
+
+- BundleAnalyzerPlugin
+
+  
+
+>**Nota:** El ejercicio con **Webpack** se encuentra en otro repositorio ([https://github.com/jvda/LemonCode7_Bundling](https://github.com/jvda/LemonCode7_Bundling))
+
+  
+
+## Añadido
+
+  
+
+- Cambio de estilo dinámico con EmotionJS
+
+- Controles de Material UI
+
+  
+
+>**Nota:** Aunque parezca que esto último no guarda relación con este módulo, se ha añadido porque pensé tendría que modificar la configuración de babel o Webpack para usar EmotionsJS, pero al final no fue así.
